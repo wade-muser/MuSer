@@ -300,29 +300,29 @@
                         </thead>
 
                         <tr>
-                            <td>id</td>
+                            <td>uuid</td>
                             <td>UUID</td>
                             <td>the unique UUID of the playlist</td>
                         </tr>
                         <tr>
-                            <td>title</td>
+                            <td>name</td>
                             <td>string</td>
                             <td>the title of the playlist</td>
                         </tr>
                         <tr>
-                            <td>songs</td>
+                            <td>has</td>
                             <td>array [Song]</td>
                             <td>the list of songs</td>
                         </tr>
                         <tr>
-                            <td>date_created</td>
+                            <td>dateCreated</td>
                             <td>date</td>
                             <td>the creation date of the playlist</td>
                         </tr>
                         <tr>
-                            <td>creator</td>
-                            <td>string</td>
-                            <td>the creator of the playlist</td>
+                            <td>uuidCreator</td>
+                            <td>UUID</td>
+                            <td>the creator uuid of the playlist</td>
                         </tr>
                         <tr>
                             <td>duration</td>
@@ -355,24 +355,51 @@
                         </thead>
 
                         <tr>
-                            <td>id</td>
+                            <td>type</td>
+                            <td>MusicalArtist</td>
+                            <td>the specific type of an artist</td>
+                        </tr>
+
+                        <tr>
+                            <td>sameAs</td>
+                            <td>dbpedia_resource</td>
+                            <td>the equivalent resource of the artist</td>
+                        </tr>
+
+                        <tr>
+                            <td>uuid</td>
                             <td>UUID</td>
-                            <td>the unique UUID of the playlist</td>
+                            <td>the unique ID of the artist</td>
                         </tr>
+
                         <tr>
-                            <td>id_wikidata</td>
-                            <td>string</td>
-                            <td>the unique ID from Wikidata</td>
-                        </tr>
-                        <tr>
-                            <td>id_dbpedia</td>
-                            <td>string</td>
-                            <td>the unique ID from DBPedia</td>
-                        </tr>
-                        <tr>
-                            <td>id_spotify</td>
+                            <td>idSpotify</td>
                             <td>string</td>
                             <td>the unique ID from Spotify</td>
+                        </tr>
+
+                        <tr>
+                            <td>name</td>
+                            <td>string</td>
+                            <td>the artist's (band's) full name</td>
+                        </tr>
+
+                        <tr>
+                            <td>firstName</td>
+                            <td>string</td>
+                            <td>the artist's (band's) first name</td>
+                        </tr>
+
+                        <tr>
+                            <td>lastName</td>
+                            <td>string</td>
+                            <td>the artist's (band's) last name</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>gender</td>
+                            <td>string</td>
+                            <td>the artist's gender</td>
                         </tr>
                         <tr>
                             <td>about</td>
@@ -380,44 +407,33 @@
                             <td>description of the artist (band)</td>
                         </tr>
                         <tr>
-                            <td>name</td>
-                            <td>string</td>
-                            <td>the artist's (band's) full name</td>
-                        </tr>
-                        <tr>
-                            <td>genres</td>
+                            <td>hasMusicalGenre</td>
                             <td>array [Genre]</td>
                             <td>the list of genres representing the artist's (band's) style</td>
                         </tr>
 
                         <tr>
-                            <td>members</td>
-                            <td>array [Artist]</td>
-                            <td>array of Artist members - composite relationship</td>
-                        </tr>
-
-                        <tr>
-                            <td>country</td>
+                            <td>musicalAgentOrigin</td>
                             <td>string</td>
                             <td>the origin country of the artist (band)</td>
                         </tr>
 
                         <tr>
-                            <td>songs</td>
+                            <td>inceptionDate</td>
+                            <td>date</td>
+                            <td>the inception date of the artist (band)</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>performs</td>
                             <td>array [Song]</td>
                             <td>the list of songs recorded by artist (band)</td>
                         </tr>
 
                         <tr>
-                            <td>inception_date</td>
-                            <td>date</td>
-                            <td>the inception date of the artist (band)</td>
-                        </tr>
-
-                        <tr>
-                            <td>retiring_date</td>
-                            <td>date</td>
-                            <td>the retiring date of the artist (band)</td>
+                            <td>released</td>
+                            <td>array [Album]</td>
+                            <td>the list of albums released by artist (band)</td>
                         </tr>
 
                         <caption>
@@ -439,47 +455,47 @@
                         </thead>
 
                         <tr>
-                            <td>id</td>
+                            <td>type</td>
+                            <td>Song</td>
+                            <td>the specific type of the melody</td>
+                        </tr>
+                        <tr>
+                            <td>uuid</td>
                             <td>UUID</td>
                             <td>the unique UUID of the song</td>
                         </tr>
+                        
                         <tr>
-                            <td>id_wikidata</td>
-                            <td>string</td>
-                            <td>the unique ID from Wikidata</td>
-                        </tr>
-                        <tr>
-                            <td>id_dbpedia</td>
-                            <td>string</td>
-                            <td>the unique ID from DBPedia</td>
-                        </tr>
-                        <tr>
-                            <td>id_spotify</td>
+                            <td>idSpotify</td>
                             <td>string</td>
                             <td>the unique ID from Spotify</td>
                         </tr>
+
                         <tr>
-                            <td>artists</td>
-                            <td>array [Artist]</td>
-                            <td>the list of artists</td>
-                        </tr>
-                        <tr>
-                            <td>title</td>
+                            <td>name</td>
                             <td>string</td>
-                            <td>the title of the song</td>
+                            <td>the song's name</td>
                         </tr>
+
                         <tr>
                             <td>duration</td>
                             <td>int</td>
                             <td>the duration of the song</td>
                         </tr>
+
                         <tr>
-                            <td>genre</td>
-                            <td>Genre</td>
+                            <td>performedBy</td>
+                            <td>array [Artist]</td>
+                            <td>the list of artists's song</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>hasMusicalGenre</td>
+                            <td>MusicalGenre</td>
                             <td>the genre of the song</td>
                         </tr>
                         <tr>
-                            <td>album</td>
+                            <td>containedBy</td>
                             <td>Album</td>
                             <td>the album that features the song</td>
                         </tr>
@@ -501,44 +517,41 @@
                             <th><center>Description</center></th>
                         </tr>
                         </thead>
-
+                        
+                        <tr>
+                            <td>type</td>
+                            <td>Album</td>
+                            <td>the specific type of the album</td>
+                        </tr>
+                        
                         <tr>
                             <td>id</td>
                             <td>UUID</td>
                             <td>the unique UUID of the song</td>
                         </tr>
+                        
                         <tr>
-                            <td>id_wikidata</td>
-                            <td>string</td>
-                            <td>the unique ID from Wikidata</td>
-                        </tr>
-                        <tr>
-                            <td>id_dbpedia</td>
-                            <td>string</td>
-                            <td>the unique ID from DBPedia</td>
-                        </tr>
-                        <tr>
-                            <td>id_spotify</td>
+                            <td>idSpotify</td>
                             <td>string</td>
                             <td>the unique ID from Spotify</td>
                         </tr>
                         <tr>
-                            <td>title</td>
+                            <td>name</td>
                             <td>string</td>
                             <td>the title of the album</td>
                         </tr>
                         <tr>
-                            <td>artists</td>
+                            <td>releasedBy</td>
                             <td>array [Artist]</td>
                             <td>the list of artists</td>
                         </tr>
                         <tr>
-                            <td>year</td>
+                            <td>releaseDate</td>
                             <td>date</td>
                             <td>the year of album release</td>
                         </tr>
                         <tr>
-                            <td>songs</td>
+                            <td>contains</td>
                             <td>array [Song]</td>
                             <td>the list of songs</td>
                         </tr>
@@ -548,7 +561,7 @@
                             <td>the duration of the album</td>
                         </tr>
                         <tr>
-                            <td>genres</td>
+                            <td>hasMusicalGenre</td>
                             <td>array [Genre]</td>
                             <td>the genres of the album</td>
                         </tr>
@@ -568,34 +581,26 @@
                             <th><center>Description</center></th>
                         </tr>
                         </thead>
-
+                        <tr>
+                            <td>type</td>
+                            <td>MusicalGenre</td>
+                            <td>the specific type of the genre</td>
+                        </tr>
+                    
                         <tr>
                             <td>id</td>
                             <td>UUID</td>
-                            <td>the unique UUID of the song</td>
+                            <td>the unique UUID of the genre</td>
                         </tr>
+                        
                         <tr>
-                            <td>id_wikidata</td>
-                            <td>string</td>
-                            <td>the unique ID from Wikidata</td>
-                        </tr>
-                        <tr>
-                            <td>id_dbpedia</td>
-                            <td>string</td>
-                            <td>the unique ID from DBPedia</td>
-                        </tr>
-                        <tr>
-                            <td>id_spotify</td>
+                            <td>idSpotify</td>
                             <td>string</td>
                             <td>the unique ID from Spotify</td>
                         </tr>
+                        
                         <tr>
-                            <td>name</td>
-                            <td>string</td>
-                            <td>the name of the Genre</td>
-                        </tr>
-                        <tr>
-                            <td>related</td>
+                            <td>relatedMusicalGenre</td>
                             <td>array [Genre]</td>
                             <td>the list of genres related</td>
                         </tr>
@@ -617,37 +622,40 @@
                         </thead>
 
                         <tr>
-                            <td>id</td>
-                            <td>UUID</td>
-                            <td>the unique UUID of the song</td>
+                            <td>type</td>
+                            <td>MusicalEvent</td>
+                            <td>the specific type of the event</td>
                         </tr>
+
+                        
                         <tr>
-                            <td>title</td>
+                            <td>name</td>
                             <td>string</td>
                             <td>the title of the event</td>
                         </tr>
+
                         <tr>
-                            <td>start_date</td>
+                            <td>startDate</td>
                             <td>date</td>
                             <td>the start date of the event</td>
                         </tr>
                         <tr>
-                            <td>end_date</td>
+                            <td>endDate</td>
                             <td>date</td>
                             <td>the end date of the event</td>
                         </tr>
                         <tr>
-                            <td>country</td>
+                            <td>eventCountry</td>
                             <td>string</td>
                             <td>the country where the event is held</td>
                         </tr>
                         <tr>
-                            <td>city</td>
+                            <td>eventCity</td>
                             <td>string</td>
                             <td>the city where the event is held</td>
                         </tr>
                         <tr>
-                            <td>place</td>
+                            <td>eventPlace</td>
                             <td>string</td>
                             <td>the place where the event is held</td>
                         </tr>
@@ -657,7 +665,7 @@
                             <td>description of the event</td>
                         </tr>
                         <tr>
-                            <td>artists</td>
+                            <td>performers</td>
                             <td>array [Artist]</td>
                             <td>the list of artists that attend the event</td>
                         </tr>
