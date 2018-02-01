@@ -101,9 +101,6 @@
             <li><p><a href="http://graphdb.ontotext.com/">GraphDB</a> is a highly-efficient and robust graph
                 database - a semantic repository that stores and manipulates RDF data along with an inference
                 engine that uses rules to infer new knowledge - and SPARQL support.</p></li>
-            <li><p><a href="http://www.xspf.org/jspf/">JSPF</a> represents the JSON version of the XSPF (XML
-                Shareable Playlist Format) and it is a next-generation playlist format for digital media
-                (songs).</p></li>
         </ul>
     </section>
     <section typeof="sa:Methods" id="architecture">
@@ -285,7 +282,7 @@
 
                 <li>
                     <p>
-                        Playlists can be accessed via a SPARQL endpoint providing a way of accessing the data from the RDF repository (GraphDB). They can also be exported from MuSeR under the JSPF format.
+                        Playlists can be accessed via a SPARQL endpoint providing a way of accessing the data from the RDF repository (GraphDB).
                     </p>
                 </li>
             </ul>
@@ -766,6 +763,34 @@
                 Table <code>Users</code> created using the AWS's DynamoDB stores the information about the registered users.
             </p>
 
+            <figure typeof="sa:Image">
+                <img src="public/resources/ss/classes1.PNG">
+                <figcaption>
+                    <strong>GraphDB - The relative sizes of the most populated classes</strong>
+                </figcaption>
+            </figure>
+
+            <figure typeof="sa:Image">
+                <img src="public/resources/ss/classes2.PNG">
+                <figcaption>
+                    <strong>GraphDB - The relationships between classes</strong>
+                </figcaption>
+            </figure>
+
+            <figure typeof="sa:Image">
+                <img src="public/resources/ss/classes3.PNG">
+                <figcaption>
+                    <strong>GraphDB - The number of relationships</strong>
+                </figcaption>
+            </figure>
+
+            <figure typeof="sa:Image">
+                <img src="public/resources/ss/pink_floyd_graph.PNG">
+                <figcaption>
+                    <strong>GraphDB - Some relationships of 'Pink Floyd' entity</strong>
+                </figcaption>
+            </figure>
+
             </section><!-- data-modelling -->
         </section>
 
@@ -779,7 +804,7 @@
                 </figcaption>
             </figure>
             <p>
-                As we can observe in the diagram shown above, all of the MuSeR's features require the authentication of the user. The user can export playlist or visualize the already created playlists. During the visualization, users will be able to export them or edit them.
+                As we can observe in the diagram shown above, all of the MuSeR's features require the authentication of the user. The user can visualize the already created playlists. During the visualization, users will be able to edit them.
             </p>
             <p>
                 Another aspect of the application that can be observed in the diagram is the content finding mechanism. Users - for example - can find artists based on keywords specified by them. After finding the desired entity, he can select and add a specific song played by the respective artist into a personal playlist.
@@ -793,7 +818,7 @@
             <h2>Conclusion & Future considerations</h2>
             <p>
                 MuSeR has been created to ease up the management of playlists for music enthusiasts by providing an intuitive platform that uses semantic Web concepts to enhance the
-                way of visualizing the relationships between various entities in the context of musical domain. The application can be extended and improved in different ways by conceiving new mechanisms and architectural ideas.
+                way of visualizing the relationships between various entities in the context of musical domain. The application can be extended and improved in different ways by conceiving new mechanisms and architectural ideas such as media streaming or machine-learning-related suggesting mechanisms.
             </p>
             <aside typeof="schema:WPSideBar">
                 <center>
@@ -886,18 +911,6 @@
                     by
                     <span property="schema:author" typeof="schema:Organization">
                         <span property="schema:name"> Auth0</span>
-                    </span>
-                </dd>
-
-                <dt>JSON Shareable Playlist Format, 2007</dt>
-                <dd id="ref-ionic" typeof="schema:CreativeWork"
-                    resource="http://www.xspf.org/jspf/">
-                    <cite property="schema:name">
-                        <a href="http://www.xspf.org/jspf/">JSPF</a>
-                    </cite>,
-                    by
-                    <span property="schema:author" typeof="schema:Organization">
-                        <span property="schema:name">Xiph.Org</span>
                     </span>
                 </dd>
 
